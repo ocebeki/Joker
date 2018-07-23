@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+
+}
+body {
+        background: #025b3f;
+}
+h1 {
+    color:	#FFD700;
+}
+#table {
+    background: #026a18;
+    max-width: 700px;   
+    height: 450px;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 30px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 20%;
+    border: solid #781717 10px;
+    -webkit-box-shadow: 2px 0px 110px -10px rgba(250, 242, 250, 1);
+    box-shadow: 2px 0px 110px -10px rgba(250, 242, 250, 1);
+}
+.grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.card {
+    height: 300px;
+    width: 30%;
+    position: relative;
+    -webkit-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    cursor: pointer;
+}
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(img/reverse.jpg);
+    background-size: 100% 100%;
+}
+.clicked {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+.opacity {
+    opacity: 1;
+}
+#win,
+#lost {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    font-size: 40px;
+    text-align: center;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    position: absolute;
+    background: #ff9800;
+    padding: 100px;
+    border-radius: 20px;
+    
+}
+#win {
+    -webkit-transition-delay: .5s;
+         -o-transition-delay: .5s;
+            transition-delay: .5s;
+}
+#lost {
+    -webkit-transition-delay: 2s;
+         -o-transition-delay: 2s;
+            transition-delay: 2s;
+}
+.scale {
+    -webkit-transform: scale(1)translate(-50%, -50%)!important;
+        -ms-transform: scale(1)translate(-50%, -50%)!important;
+            transform: scale(1)translate(-50%, -50%)!important;
+
+}
+.btn {
+    height: 50px;
+    width: 120px;
+    border: none;
+    border-radius: 7px;
+    background: #fefcea;
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fefcea), to(#f1da36));
+    background: -o-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+    background: linear-gradient(to bottom, #fefcea 0%, #f1da36 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36', GradientType=0);
+    /* IE6-9 */
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.btn:hover {
+    cursor: pointer;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+@media (max-width:625px){
+    .card{
+            height: 200px;
+    width: 28%;
+    }
+}
+@media (max-width:420px){
+    .card{
+            height: 138px;
+    width: 28%;
+    }
+    #table {
+        height: 
+    }
+}
