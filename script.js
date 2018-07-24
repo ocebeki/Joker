@@ -76,7 +76,7 @@ grid.addEventListener('click', event => {
 
         } else {
 
-            joker.style.transitionDelay = '1s'
+            joker.classList.add('delay');
             joker.classList.add('clicked');
             lost.classList.add('scale')
             count++

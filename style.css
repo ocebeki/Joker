@@ -2,19 +2,18 @@
 *::before,
 *::after {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     text-align: center;
-
 }
 body {
-        background: #025b3f;
+    background: #025b3f;
 }
 h1 {
-    color:	#FFD700;
+    color: #FFD700;
 }
 #table {
     background: #026a18;
-    max-width: 700px;   
+    max-width: 700px;
     height: 450px;
     margin: auto;
     margin-top: 10px;
@@ -33,19 +32,19 @@ h1 {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 300px;
     width: 100%;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .card {
     height: 300px;
@@ -55,7 +54,7 @@ h1 {
     -o-transition: all .4s linear;
     transition: all .4s linear;
     -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    transform-style: preserve-3d;
     cursor: pointer;
 }
 .back {
@@ -63,10 +62,12 @@ h1 {
     height: 100%;
     position: absolute;
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .front {
     height: 100%;
@@ -74,10 +75,15 @@ h1 {
     position: absolute;
     background: url(img/reverse.jpg);
     background-size: 100% 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .clicked {
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.delay {
+    transition-delay: 1s;
 }
 .opacity {
     opacity: 1;
@@ -85,8 +91,8 @@ h1 {
 #win,
 #lost {
     -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
     font-size: 40px;
     text-align: center;
     -webkit-transition: all 1s;
@@ -99,23 +105,21 @@ h1 {
     background: #ff9800;
     padding: 100px;
     border-radius: 20px;
-    
 }
 #win {
     -webkit-transition-delay: .5s;
-         -o-transition-delay: .5s;
-            transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
 }
 #lost {
     -webkit-transition-delay: 2s;
-         -o-transition-delay: 2s;
-            transition-delay: 2s;
+    -o-transition-delay: 2s;
+    transition-delay: 2s;
 }
 .scale {
     -webkit-transform: scale(1)translate(-50%, -50%)!important;
-        -ms-transform: scale(1)translate(-50%, -50%)!important;
-            transform: scale(1)translate(-50%, -50%)!important;
-
+    -ms-transform: scale(1)translate(-50%, -50%)!important;
+    transform: scale(1)translate(-50%, -50%)!important;
 }
 .btn {
     height: 50px;
@@ -139,25 +143,24 @@ h1 {
 .btn:hover {
     cursor: pointer;
     -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-            transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
 }
-
-@media (max-width:625px){
-    .card{
-            height: 200px;
-    width: 28%;
+@media (max-width:625px) {
+    .card {
+        height: 200px;
+        width: 28%;
     }
 }
-@media (max-width:420px){
-    .card{
-            height: 138px;
-    width: 28%;
+@media (max-width:420px) {
+    .card {
+        height: 138px;
+        width: 28%;
     }
     #table {
-        height: 
+        height:
     }
 }
