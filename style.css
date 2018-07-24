@@ -98,8 +98,11 @@ h1 {
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
-    top: 50%;
-    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    left: 10%;
+    margin: auto;
     z-index: 100;
     position: absolute;
     background: #ff9800;
@@ -117,9 +120,9 @@ h1 {
     transition-delay: 2s;
 }
 .scale {
-    -webkit-transform: scale(1)translate(-50%, -50%)!important;
-    -ms-transform: scale(1)translate(-50%, -50%)!important;
-    transform: scale(1)translate(-50%, -50%)!important;
+    -webkit-transform: scale(1)!important;
+    -ms-transform: scale(1)!important;
+    transform: scale(1)!important;
 }
 .btn {
     height: 50px;
