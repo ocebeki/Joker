@@ -119,6 +119,13 @@ h1 {
     -o-transition-delay: 2s;
     transition-delay: 2s;
 }
+.end {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
 .scale {
     -webkit-transform: scale(1)!important;
     -ms-transform: scale(1)!important;
