@@ -60,29 +60,60 @@ let win = document.getElementById('win');
 let lost = document.getElementById('lost');
 let count = 0;
 
+var width = window.screen.width;
 
-grid.addEventListener('touchstart', event => {
-    const clicked = event.target;
 
-    if (count < 2 && clicked.parentNode.classList.contains('card')) {
+(function foo() {
+    if (width < 500) {
+        grid.addEventListener('touchstart', event => {
+            const clicked = event.target;
 
-        count++
-        clicked.parentNode.classList.add('clicked');
+            if (count < 2 && clicked.parentNode.classList.contains('card')) {
 
-        if (count < 2 && clicked.parentNode.getAttribute('name') === 'joker') {
+                count++
+                clicked.parentNode.classList.add('clicked');
 
-            win.classList.add('scale')
-            count++
+                if (count < 2 && clicked.parentNode.getAttribute('name') === 'joker') {
 
-        } else {
+                    win.classList.add('scale')
+                    count++
 
-            joker.classList.add('delay');
-            joker.classList.add('clicked');
-            lost.classList.add('scale')
-            count++
-        }
+                } else {
+
+                    joker.classList.add('delay');
+                    joker.classList.add('clicked');
+                    lost.classList.add('scale')
+                    count++
+                }
+            }
+        })
+    } else {
+        grid.addEventListener('click', event => {
+            const clicked = event.target;
+
+            if (count < 2 && clicked.parentNode.classList.contains('card')) {
+
+                count++
+                clicked.parentNode.classList.add('clicked');
+
+                if (count < 2 && clicked.parentNode.getAttribute('name') === 'joker') {
+
+                    win.classList.add('scale')
+                    count++
+
+                } else {
+
+                    joker.classList.add('delay');
+                    joker.classList.add('clicked');
+                    lost.classList.add('scale')
+                    count++
+                }
+            }
+        })
+
     }
-})
+})();
+
 
 win.addEventListener('click', e => {
     const clicked = e.target;
