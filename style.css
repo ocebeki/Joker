@@ -106,7 +106,6 @@ h1 {
     z-index: 100;
     position: absolute;
     background: #ff9800;
-    padding: 100px;
     border-radius: 20px;
 }
 #win {
@@ -124,6 +123,7 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
     
 }
 .scale {
