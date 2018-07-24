@@ -61,7 +61,7 @@ let lost = document.getElementById('lost');
 let count = 0;
 
 
-grid.addEventListener('click', event => {
+grid.addEventListener('touchstart', event => {
     const clicked = event.target;
 
     if (count < 2 && clicked.parentNode.classList.contains('card')) {
